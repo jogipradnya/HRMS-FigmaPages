@@ -166,3 +166,18 @@ export default function ContactUs() {
 
   </form>
 </div>
+@media (max-width: 768px) {
+
+  .send-msg-section {
+    padding: 20px !important;
+  }
+
+  .send-msg-form input,
+  .send-msg-form textarea {
+    font-size: 14px !important;
+  }
+
+  .send-msg-form button {
+    width: 100%;
+  }
+}
