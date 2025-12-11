@@ -75,3 +75,94 @@ export default function ContactUs() {
     </div>
   );
 }
+{/* ---------------------- SEND US MESSAGE SECTION ---------------------- */}
+
+<div className="send-msg-section" style={{
+  marginTop: "40px",
+  padding: "30px",
+  background: "#FFFFFF",
+  borderRadius: "12px",
+  boxShadow: "0 2px 10px rgba(0,0,0,0.08)"
+}}>
+
+  <h2 style={{
+    fontSize: "24px",
+    fontWeight: "600",
+    marginBottom: "20px",
+    color: "#333"
+  }}>
+    Send Us a Message
+  </h2>
+
+  <form className="send-msg-form" style={{
+    display: "flex",
+    flexDirection: "column",
+    gap: "18px"
+  }}>
+
+    <input 
+      type="text" 
+      placeholder="Full Name"
+      style={{
+        height: "48px",
+        padding: "12px",
+        borderRadius: "8px",
+        border: "1px solid #D0D5DD",
+        fontSize: "15px"
+      }}
+    />
+
+    <input 
+      type="email" 
+      placeholder="Email Address"
+      style={{
+        height: "48px",
+        padding: "12px",
+        borderRadius: "8px",
+        border: "1px solid #D0D5DD",
+        fontSize: "15px"
+      }}
+    />
+
+    <input 
+      type="text" 
+      placeholder="Subject"
+      style={{
+        height: "48px",
+        padding: "12px",
+        borderRadius: "8px",
+        border: "1px solid #D0D5DD",
+        fontSize: "15px"
+      }}
+    />
+
+    <textarea
+      placeholder="Your Message"
+      rows="5"
+      style={{
+        padding: "12px",
+        borderRadius: "8px",
+        border: "1px solid #D0D5DD",
+        fontSize: "15px",
+        resize: "none"
+      }}
+    ></textarea>
+
+    <button 
+      type="submit"
+      style={{
+        background: "#4A66F7",
+        color: "#FFF",
+        padding: "14px 20px",
+        border: "none",
+        borderRadius: "8px",
+        cursor: "pointer",
+        fontSize: "16px",
+        fontWeight: "600"
+      }}
+    >
+      Submit
+    </button>
+
+  </form>
+</div>
