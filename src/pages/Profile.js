@@ -7,8 +7,8 @@ import profileimage from "../assets/profile-image.png";
 
 const Profile = () => {
   return (
-    <div className="w-full min-h-screen md:px-6">
-      <div className="max-w-7xl mx-auto">
+    <div className="w-full min-h-screen md:px-6 ">
+      <div className="w-full mx-auto">
 
         {/* Greeting */}
         <h2 className="text-2xl font-semibold mb-2">👋 Greetings, Sophie</h2>
@@ -17,7 +17,7 @@ const Profile = () => {
         <div className="flex flex-col lg:flex-row gap-6">
 
           {/* LEFT SIDE CONTENT */}
-          <div className="flex-1 space-y-6">
+          <div className="flex-1 space-y-9">
 
             {/* ---------------- PROFILE SECTION ---------------- */}
             <section className="bg-[#E5F4FF] p-6 rounded-xl shadow-md">
@@ -86,7 +86,7 @@ const Profile = () => {
             </section>
 
             {/* ---------------- WORK OVERFLOW ---------------- */}
-            <section className="flex flex-row gap-3 justify-between">
+            <section className="flex flex-row gap-8 justify-between">
              <div className="bg-[#E5F4FF] p-4  rounded-xl w-full min-h-20"></div>
              <div className="bg-[#E5F4FF] p-4  rounded-xl w-full"></div>
              <div className="bg-[#E5F4FF] p-4  rounded-xl  w-full"></div>
