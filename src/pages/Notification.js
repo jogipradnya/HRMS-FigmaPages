@@ -1,5 +1,11 @@
 import React from "react";
-
+import cautionIcon from "../assets/caution.png";
+import arrowIcon from "../assets/arrowUp.png";
+import calendarIcon from "../assets/calender2.png";
+import checkIcon from "../assets/checkmark.png";
+import thumbIcon from "../assets/thumbUp.png";
+import personIcon from "../assets/person.png";
+import gearIcon from "../assets/gear.png";
 const Notification = () => {
   return (
     <div className="w-full min-h-screen bg-gray-100 p-4 md:p-8">
@@ -19,78 +25,137 @@ const Notification = () => {
         <button className="px-4 py-1 bg-white shadow rounded-xl">Events</button>
         <button className="px-4 py-1 bg-white shadow rounded-xl">Approvals</button>
       </div>
-
-      {/* Notifications Section */}
-      <div className="space-y-6">
-        {/* Recognition */}
-        <div>
-          <h2 className="text-lg font-medium mb-3">Recognition (1)</h2>
-          <div className="bg-white p-4 rounded-xl shadow flex flex-col gap-1">
-            <p className="font-semibold">Pavan Recognized You for Outstanding Work</p>
-            <span className="text-sm text-gray-500">1 hour ago</span>
+      {/* Recognition Section */}
+      <div className="mb-8">
+        <h2 className="text-lg font-semibold mb-3">Recognition (1)</h2>
+        <div className="bg-white p-4 rounded-2xl shadow flex items-start gap-3">
+          <div className="w-14 h-14 bg-[#C7F3FF] rounded-full flex items-center justify-center flex-shrink-0">
+            <img
+              src={thumbIcon}
+              alt="like"
+              className="w-8 h-8 object-contain"
+            />
+          </div>
+          {/*<img src= alt="like" className="w-8 h-8" />*/}
+          <div>
+            <p className="font-medium">Pavan Recognized You for Outstanding Work</p>
+            <p className="text-sm text-gray-500">1 hour ago</p>
           </div>
         </div>
+      </div>
 
+      {/* Grid Sections */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {/* Announcements */}
-        <div>
-          <h2 className="text-lg font-medium mb-3">Announcements (1)</h2>
-          <div className="bg-white p-4 rounded-xl shadow flex flex-col gap-1">
-            <p className="font-semibold">Company Town Hall Meeting</p>
-            <span className="text-sm text-gray-500">1 hour ago</span>
-          </div>
-        </div>
-
-        {/* Tasks / Urgent */}
-        <div>
-          <h2 className="text-lg font-medium mb-3">Tasks / Urgent (1)</h2>
-          <div className="bg-white p-4 rounded-xl shadow flex flex-col gap-1">
-            <p className="font-semibold text-red-500">
-              Action Required: Complete Your Work As Early As Possible then Push into GitHub [Urgent]
-            </p>
-            <span className="text-sm text-gray-500">Dec 1</span>
+        <div className="bg-white p-4 rounded-2xl shadow mr-6">
+          <h2 className="font-semibold mb-3">Announcements (1)</h2>
+          <div className="p-4 bg-gray-50 border rounded-xl flex gap-3 items-start">
+            <div className="w-14 h-14 bg-[#C7F3FF] rounded-full flex items-center justify-center flex-shrink-0">
+              <img
+                src={calendarIcon}
+                alt="calender"
+                className="w-8 h-8 object-contain"
+              />
+            </div>
+            <div>
+              <p className="font-medium">Company Town Hall Meeting</p>
+              <p className="text-sm text-gray-500">1 hour ago</p>
+            </div>
           </div>
         </div>
 
         {/* Approvals */}
-        <div>
-          <h2 className="text-lg font-medium mb-3">Approvals (1)</h2>
-          <div className="bg-white p-4 rounded-xl shadow flex flex-col gap-1">
-            <p className="font-semibold">Manager Approved Your Leave</p>
-            <span className="text-sm text-gray-500">Yesterday</span>
+        <div className="bg-white p-4 rounded-2xl shadow ml-6">
+          <h2 className="font-semibold mb-3">Approvals (1)</h2>
+          <div className="p-4 bg-gray-50 border rounded-xl flex gap-3 items-start">
+            <div className="w-14 h-14 bg-[#C7F3FF] rounded-full flex items-center justify-center flex-shrink-0">
+              <img
+                src={checkIcon}
+                alt="check"
+                className="w-14 h-14 object-contain"
+              />
+            </div>
+            <div>
+              <p className="font-medium">Manager Approved Your Leave</p>
+              <p className="text-sm text-gray-500">Yesterday</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Tasks */}
+        <div className="bg-white p-4 rounded-2xl shadow mr-6">
+          <h2 className="font-semibold mb-3">Tasks / Urgent (1)</h2>
+          <div className="p-4 bg-gray-50 border rounded-xl flex gap-3 items-start">
+            <div className="w-14 h-14 bg-[#C7F3FF] rounded-full flex items-center justify-center flex-shrink-0">
+              <img
+                src={cautionIcon}
+                alt="warning"
+                className="w-8 h-8 object-contain"
+              />
+            </div>
+            <div>
+              <p className="font-medium text-red-500">Action Required: Complete Your Work ASAP then Push into GitHub [Urgent]</p>
+              <p className="text-sm text-gray-500">Dec 1</p>
+            </div>
           </div>
         </div>
 
         {/* Referrals */}
-        <div>
-          <h2 className="text-lg font-medium mb-3">Referrals / Hiring (1)</h2>
-          <div className="bg-white p-4 rounded-xl shadow flex flex-col gap-1">
-            <p className="font-semibold">
-              Your Referral for Software Engineer Moved to Interview Stage
-            </p>
-            <span className="text-sm text-gray-500">Wed, Nov 29</span>
+        <div className="bg-white p-4 rounded-2xl shadow ml-6">
+          <h2 className="font-semibold mb-3">Referrals / Hiring (1)</h2>
+          <div className="p-4 bg-gray-50 border rounded-xl flex gap-3 items-start">
+            <div className="w-14 h-14 bg-[#C7F3FF] rounded-full flex items-center justify-center flex-shrink-0">
+              <img
+                src={personIcon}
+                alt="people"
+                className="w-6 h-6 object-contain"
+              />
+            </div>
+            <div>
+              <p className="font-medium">Your Referral for Software Engineer Moved to Interview Stage</p>
+              <p className="text-sm text-gray-500">Wed, Nov 29</p>
+            </div>
           </div>
         </div>
 
         {/* System Alerts */}
-        <div>
-          <h2 className="text-lg font-medium mb-3">System Alerts</h2>
+        <div className="bg-white p-4 rounded-2xl shadow mr-6">
+          <h2 className="font-semibold mb-3">System Alerts</h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div className="bg-white p-4 rounded-xl shadow flex flex-col gap-1">
-              <p className="font-semibold">New Update Available</p>
-              <span className="text-sm text-gray-500">Wed, Nov 30</span>
+          <div className="space-y-3">
+            <div className="p-4 bg-gray-50 border rounded-xl flex gap-3 items-start">
+              <div className="w-14 h-14 bg-[#C7F3FF] rounded-full flex items-center justify-center flex-shrink-0">
+                <img
+                  src={gearIcon}
+                  alt="setting"
+                  className="w-8 h-8 object-contain"
+                />
+              </div>
+              <div>
+                <p className="font-medium">New Update Available</p>
+                <p className="text-sm text-gray-500">Wed, Nov 30</p>
+              </div>
             </div>
 
-            <div className="bg-white p-4 rounded-xl shadow flex flex-col gap-1">
-              <p className="font-semibold">New Update Available</p>
-              <span className="text-sm text-gray-500">Wed, Nov 25</span>
+            <div className="p-4 bg-gray-50 border rounded-xl flex gap-3 items-start">
+              <div className="w-14 h-14 bg-[#C7F3FF] rounded-full flex items-center justify-center flex-shrink-0">
+                <img
+                  src={arrowIcon}
+                  alt="up"
+                  className="w-8 h-8 object-contain"
+                />
+              </div>
+              <div>
+                <p className="font-medium">New Update Available</p>
+                <p className="text-sm text-gray-500">Wed, Nov 25</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
   );
-};
+}
 
 export default Notification;
 
