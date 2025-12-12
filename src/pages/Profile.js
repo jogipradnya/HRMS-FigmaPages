@@ -7,11 +7,11 @@ import profileimage from "../assets/profile-image.png";
 
 const Profile = () => {
   return (
-    <div className="w-full min-h-screen">
+    <div className="w-full min-h-screen md:px-6">
       <div className="max-w-7xl mx-auto">
 
         {/* Greeting */}
-        <h2 className="text-2xl font-semibold mb-6">👋 Greetings, Sophie</h2>
+        <h2 className="text-2xl font-semibold mb-2">👋 Greetings, Sophie</h2>
 
         {/* MAIN LAYOUT */}
         <div className="flex flex-col lg:flex-row gap-6">
@@ -87,21 +87,21 @@ const Profile = () => {
 
             {/* ---------------- WORK OVERFLOW ---------------- */}
             <section className="flex flex-row gap-3 justify-between">
-             <div className="bg-[#E5F4FF] p-4  rounded w-full"></div>
-             <div className="bg-[#E5F4FF] p-4  rounded w-full"></div>
-             <div className="bg-[#E5F4FF] p-4  rounded w-full"></div>
-             <div className="bg-[#E5F4FF] p-4 rounded w-full"></div>
+             <div className="bg-[#E5F4FF] p-4  rounded-xl w-full min-h-20"></div>
+             <div className="bg-[#E5F4FF] p-4  rounded-xl w-full"></div>
+             <div className="bg-[#E5F4FF] p-4  rounded-xl  w-full"></div>
+             <div className="bg-[#E5F4FF] p-4 rounded-xl w-full"></div>
              
             </section>
 
             {/* ---------------- DUE TASKS ---------------- */}
             <section className="flex flex-col gap-2">
-             <div className="bg-[#E5F4FF] p-4  rounded w-full"></div>
-              <div className="bg-[#E5F4FF] p-4  rounded w-full"></div>
+             <div className="bg-[#E5F4FF] p-4  rounded-xl w-full min-h-14"></div>
+              <div className="bg-[#E5F4FF] p-4  rounded w-full  min-h-14"></div>
             </section>
 
             {/* ---------------- QUICK ACTIONS ---------------- */}
-            <section className="p-4 bg-[#E5F4FF] rounded-xl shadow-md min-h-20">
+            <section className="p-4 bg-[#E5F4FF] rounded-xl shadow-md min-h-44">
               
             </section>
 
