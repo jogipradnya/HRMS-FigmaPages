@@ -6,6 +6,7 @@ import checkIcon from "../assets/checkmark.png";
 import thumbIcon from "../assets/thumbUp.png";
 import personIcon from "../assets/person.png";
 import gearIcon from "../assets/gear.png";
+
 const Notification = () => {
   return (
     <div className="w-full min-h-screen bg-gray-100 p-4 md:p-8">
@@ -25,18 +26,14 @@ const Notification = () => {
         <button className="px-4 py-1 bg-white shadow rounded-xl">Events</button>
         <button className="px-4 py-1 bg-white shadow rounded-xl">Approvals</button>
       </div>
+
       {/* Recognition Section */}
       <div className="mb-8">
         <h2 className="text-lg font-semibold mb-3">Recognition (1)</h2>
         <div className="bg-white p-4 rounded-2xl shadow flex items-start gap-3">
           <div className="w-14 h-14 bg-[#C7F3FF] rounded-full flex items-center justify-center flex-shrink-0">
-            <img
-              src={thumbIcon}
-              alt="like"
-              className="w-8 h-8 object-contain"
-            />
+            <img src={thumbIcon} alt="like" className="w-8 h-8 object-contain" />
           </div>
-          {/*<img src= alt="like" className="w-8 h-8" />*/}
           <div>
             <p className="font-medium">Pavan Recognized You for Outstanding Work</p>
             <p className="text-sm text-gray-500">1 hour ago</p>
@@ -46,16 +43,13 @@ const Notification = () => {
 
       {/* Grid Sections */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        
         {/* Announcements */}
-        <div className="bg-white p-4 rounded-2xl shadow mr-6">
+        <div className="bg-white p-4 rounded-2xl shadow">
           <h2 className="font-semibold mb-3">Announcements (1)</h2>
           <div className="p-4 bg-gray-50 border rounded-xl flex gap-3 items-start">
             <div className="w-14 h-14 bg-[#C7F3FF] rounded-full flex items-center justify-center flex-shrink-0">
-              <img
-                src={calendarIcon}
-                alt="calender"
-                className="w-8 h-8 object-contain"
-              />
+              <img src={calendarIcon} alt="calendar" className="w-8 h-8 object-contain" />
             </div>
             <div>
               <p className="font-medium">Company Town Hall Meeting</p>
@@ -65,15 +59,11 @@ const Notification = () => {
         </div>
 
         {/* Approvals */}
-        <div className="bg-white p-4 rounded-2xl shadow ml-6">
+        <div className="bg-white p-4 rounded-2xl shadow">
           <h2 className="font-semibold mb-3">Approvals (1)</h2>
           <div className="p-4 bg-gray-50 border rounded-xl flex gap-3 items-start">
             <div className="w-14 h-14 bg-[#C7F3FF] rounded-full flex items-center justify-center flex-shrink-0">
-              <img
-                src={checkIcon}
-                alt="check"
-                className="w-14 h-14 object-contain"
-              />
+              <img src={checkIcon} alt="check" className="w-8 h-8 object-contain" />
             </div>
             <div>
               <p className="font-medium">Manager Approved Your Leave</p>
@@ -83,53 +73,45 @@ const Notification = () => {
         </div>
 
         {/* Tasks */}
-        <div className="bg-white p-4 rounded-2xl shadow mr-6">
+        <div className="bg-white p-4 rounded-2xl shadow">
           <h2 className="font-semibold mb-3">Tasks / Urgent (1)</h2>
           <div className="p-4 bg-gray-50 border rounded-xl flex gap-3 items-start">
             <div className="w-14 h-14 bg-[#C7F3FF] rounded-full flex items-center justify-center flex-shrink-0">
-              <img
-                src={cautionIcon}
-                alt="warning"
-                className="w-8 h-8 object-contain"
-              />
+              <img src={cautionIcon} alt="warning" className="w-8 h-8 object-contain" />
             </div>
             <div>
-              <p className="font-medium text-red-500">Action Required: Complete Your Work ASAP then Push into GitHub [Urgent]</p>
+              <p className="font-medium text-red-500">
+                Action Required: Complete Your Work ASAP then Push into GitHub [Urgent]
+              </p>
               <p className="text-sm text-gray-500">Dec 1</p>
             </div>
           </div>
         </div>
 
         {/* Referrals */}
-        <div className="bg-white p-4 rounded-2xl shadow ml-6">
+        <div className="bg-white p-4 rounded-2xl shadow">
           <h2 className="font-semibold mb-3">Referrals / Hiring (1)</h2>
           <div className="p-4 bg-gray-50 border rounded-xl flex gap-3 items-start">
             <div className="w-14 h-14 bg-[#C7F3FF] rounded-full flex items-center justify-center flex-shrink-0">
-              <img
-                src={personIcon}
-                alt="people"
-                className="w-6 h-6 object-contain"
-              />
+              <img src={personIcon} alt="people" className="w-6 h-6 object-contain" />
             </div>
             <div>
-              <p className="font-medium">Your Referral for Software Engineer Moved to Interview Stage</p>
+              <p className="font-medium">
+                Your Referral for Software Engineer Moved to Interview Stage
+              </p>
               <p className="text-sm text-gray-500">Wed, Nov 29</p>
             </div>
           </div>
         </div>
 
         {/* System Alerts */}
-        <div className="bg-white p-4 rounded-2xl shadow mr-6">
+        <div className="bg-white p-4 rounded-2xl shadow">
           <h2 className="font-semibold mb-3">System Alerts</h2>
 
           <div className="space-y-3">
             <div className="p-4 bg-gray-50 border rounded-xl flex gap-3 items-start">
               <div className="w-14 h-14 bg-[#C7F3FF] rounded-full flex items-center justify-center flex-shrink-0">
-                <img
-                  src={gearIcon}
-                  alt="setting"
-                  className="w-8 h-8 object-contain"
-                />
+                <img src={gearIcon} alt="setting" className="w-8 h-8 object-contain" />
               </div>
               <div>
                 <p className="font-medium">New Update Available</p>
@@ -139,11 +121,7 @@ const Notification = () => {
 
             <div className="p-4 bg-gray-50 border rounded-xl flex gap-3 items-start">
               <div className="w-14 h-14 bg-[#C7F3FF] rounded-full flex items-center justify-center flex-shrink-0">
-                <img
-                  src={arrowIcon}
-                  alt="up"
-                  className="w-8 h-8 object-contain"
-                />
+                <img src={arrowIcon} alt="up" className="w-8 h-8 object-contain" />
               </div>
               <div>
                 <p className="font-medium">New Update Available</p>
@@ -152,10 +130,10 @@ const Notification = () => {
             </div>
           </div>
         </div>
+
       </div>
     </div>
   );
-}
+};
 
 export default Notification;
-
