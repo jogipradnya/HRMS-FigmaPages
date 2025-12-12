@@ -8,8 +8,11 @@ import personIcon from "../assets/person.png";
 import gearIcon from "../assets/gear.png";
 
 const Notification = () => {
+  const [filter, setFilter] = React.useState("All");
+
   return (
     <div className="w-full min-h-screen bg-gray-100 p-4 md:p-8">
+
       {/* Header */}
       <div className="flex justify-between items-center mb-6">
         <h1 className="text-2xl font-semibold">My Notifications</h1>
@@ -20,14 +23,20 @@ const Notification = () => {
 
       {/* Filter Tabs */}
       <div className="flex gap-2 flex-wrap mb-6">
-        <button className="px-4 py-1 bg-blue-500 text-white rounded-xl">All</button>
-        <button className="px-4 py-1 bg-white shadow rounded-xl">Unread</button>
-        <button className="px-4 py-1 bg-white shadow rounded-xl">Recognition</button>
-        <button className="px-4 py-1 bg-white shadow rounded-xl">Events</button>
-        <button className="px-4 py-1 bg-white shadow rounded-xl">Approvals</button>
+        {["All", "Unread", "Recognition", "Events", "Approvals"].map((btn) => (
+          <button
+            key={btn}
+            onClick={() => setFilter(btn)}
+            className={`px-4 py-1 rounded-xl shadow 
+            ${filter === btn ? "bg-blue-500 text-white" : "bg-white"}`}
+          >
+            {btn}
+          </button>
+        ))}
       </div>
 
       {/* Recognition Section */}
+      {(filter === "All" || filter === "Recognition") && (
       <div className="mb-8">
         <h2 className="text-lg font-semibold mb-3">Recognition (1)</h2>
         <div className="bg-white p-4 rounded-2xl shadow flex items-start gap-3">
@@ -40,11 +49,13 @@ const Notification = () => {
           </div>
         </div>
       </div>
+      )}
 
       {/* Grid Sections */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         
         {/* Announcements */}
+        {(filter === "All" || filter === "Events") && (
         <div className="bg-white p-4 rounded-2xl shadow">
           <h2 className="font-semibold mb-3">Announcements (1)</h2>
           <div className="p-4 bg-gray-50 border rounded-xl flex gap-3 items-start">
@@ -57,8 +68,10 @@ const Notification = () => {
             </div>
           </div>
         </div>
+        )}
 
         {/* Approvals */}
+        {(filter === "All" || filter === "Approvals") && (
         <div className="bg-white p-4 rounded-2xl shadow">
           <h2 className="font-semibold mb-3">Approvals (1)</h2>
           <div className="p-4 bg-gray-50 border rounded-xl flex gap-3 items-start">
@@ -71,8 +84,10 @@ const Notification = () => {
             </div>
           </div>
         </div>
+        )}
 
         {/* Tasks */}
+        {(filter === "All" || filter === "Unread") && (
         <div className="bg-white p-4 rounded-2xl shadow">
           <h2 className="font-semibold mb-3">Tasks / Urgent (1)</h2>
           <div className="p-4 bg-gray-50 border rounded-xl flex gap-3 items-start">
@@ -87,8 +102,10 @@ const Notification = () => {
             </div>
           </div>
         </div>
+        )}
 
         {/* Referrals */}
+        {(filter === "All" || filter === "Events") && (
         <div className="bg-white p-4 rounded-2xl shadow">
           <h2 className="font-semibold mb-3">Referrals / Hiring (1)</h2>
           <div className="p-4 bg-gray-50 border rounded-xl flex gap-3 items-start">
@@ -103,8 +120,10 @@ const Notification = () => {
             </div>
           </div>
         </div>
+        )}
 
         {/* System Alerts */}
+        {(filter === "All" || filter === "Events") && (
         <div className="bg-white p-4 rounded-2xl shadow">
           <h2 className="font-semibold mb-3">System Alerts</h2>
 
@@ -128,8 +147,10 @@ const Notification = () => {
                 <p className="text-sm text-gray-500">Wed, Nov 25</p>
               </div>
             </div>
+
           </div>
         </div>
+        )}
 
       </div>
     </div>
